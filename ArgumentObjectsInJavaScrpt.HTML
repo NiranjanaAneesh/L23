@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Argument Objects</h1>
+    <h3><p>In JavaScript, the arguments object is an array-like object available within all non-arrow functions. It provides access
+    to the function's passed parameters, allowing you to work with the arguments passed into a function even if they are not
+    explicitly named in the function's declaration. The arguments object contains an entry for each argument passed to the
+    function, and its length corresponds to the number of arguments provided. However, it is not a true array and does not
+    have array methods like push, pop, or forEach directly available. The arguments object can be useful for functions that
+    accept a variable number of arguments, but with the introduction of the rest parameters (...), it has become less
+    commonly used in modern JavaScript. </p></h3>
+    <h2><p>Finding the largest number with help of Argument Objects.</p></h2>
+    <p id="result"></p>
+    <script>
+        function findMax() {
+
+            var max = 0;
+            for(i = 0; i < arguments.length; i++) {
+            if (arguments[i] > max) {
+              max = argument[i];  
+            }
+                
+            }
+            return max;
+        }
+       
+    
+    document.getElementById("result").innerHTML = findMax( 3, 12, 13, 1, 33);
+    </script>
+</body>
+</html>
